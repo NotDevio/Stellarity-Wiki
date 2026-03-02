@@ -4,44 +4,69 @@
 <meta charset="UTF-8">
 <title>Stellarity Wiki — Main</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* Optional hover effect for clarity */
+.categories li {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.categories li:hover {
+  color: #facc15; /* bright yellow highlight */
+}
+</style>
 </head>
 <body>
 
 <header>
-<h1>✨ Stellarity Wiki</h1>
-<p>Modern Player-Friendly Guide</p>
+  <h1>✨ Stellarity Wiki</h1>
+  <p>Modern Player-Friendly Guide</p>
 </header>
 
 <nav>
-<button onclick="location.href='index.html'">🏠 Main</button>
-<button onclick="location.href='armor.html'">🛡 Armor</button>
-<button onclick="location.href='melee.html'">⚔ Weapons | Melee & Ranged</button>
-<button onclick="location.href='materials.html'">💎 Materials</button>
-<button onclick="location.href='trinkets.html'">🔮 Trinkets</button>
-<button onclick="location.href='mechanics.html'">⚙ Mechanics</button>
-<button onclick="location.href='enchantments.html'">✨ Enchantments</button>
+  <button onclick="location.href='index.html'">🏠 Main</button>
+  <button onclick="location.href='armor.html'">🛡 Armor</button>
+  <button onclick="location.href='melee.html'">⚔ Weapons | Melee & Ranged</button>
+  <button onclick="location.href='materials.html'">💎 Materials</button>
+  <button onclick="location.href='trinkets.html'">🔮 Trinkets</button>
+  <button onclick="location.href='mechanics.html'">⚙ Mechanics</button>
+  <button onclick="location.href='enchantments.html'">✨ Enchantments</button>
 </nav>
 
 <div class="container">
-<h2 class="section-header">Main Page</h2>
-<div class="card">
-<h3>Overview</h3>
-<ul>
-<li>🛡 Armor</li>
-<li>⚔ Weapons | Melee & Ranged</li>
-<li>💎 Materials</li>
-<li>🔮 Trinkets</li>
-<li>⚙ Mechanics</li>
-<li>✨ Enchantments</li>
-</ul>
-<p style="font-size:0.9em;color:#94a3b8;">*Click a category to view its page*</p>
-</div>
+  <h2 class="section-header">Main Page</h2>
+
+  <div class="card categories">
+    <h3>Categories</h3>
+    <ul>
+      <li data-page="armor.html">🛡 Armor</li>
+      <li data-page="melee.html">⚔ Weapons | Melee & Ranged</li>
+      <li data-page="materials.html">💎 Materials</li>
+      <li data-page="trinkets.html">🔮 Trinkets</li>
+      <li data-page="mechanics.html">⚙ Mechanics</li>
+      <li data-page="enchantments.html">✨ Enchantments</li>
+    </ul>
+    <p style="font-size:0.9em;color:#94a3b8;">*Click a category to view its page*</p>
+  </div>
+
 </div>
 
 <footer style="text-align:center; padding:15px; background-color:#222; color:#fff; margin-top:30px;">
     Stellarity Wiki - Devio
 </footer>
 
-</body>
+<!-- JavaScript for category navigation -->
+<script>
+  const categoryItems = document.querySelectorAll('.categories li');
 
+  categoryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const page = item.getAttribute('data-page');
+      if (page) {
+        window.location.href = page;
+      }
+    });
+  });
+</script>
+
+</body>
 </html>
