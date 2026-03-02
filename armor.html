@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <title>Stellarity Wiki — Armor</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* Material links inside armor cards */
+.mat a {
+    color: #e0e7ff; /* white text */
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.mat a:hover {
+    color: #22c55e;
+    text-decoration: underline;
+}
+</style>
 </head>
 <body>
 
@@ -14,29 +27,29 @@
 
 <nav>
 <button onclick="location.href='index.html'">🏠 Main</button>
-<button onclick="location.href='armor.html'">🛡 Armor</button>
+<button class="active">🛡 Armor</button>
 <button onclick="location.href='melee.html'">⚔ Weapons | Melee & Ranged</button>
 <button onclick="location.href='materials.html'">💎 Materials</button>
 <button onclick="location.href='trinkets.html'">🔮 Trinkets</button>
 <button onclick="location.href='mechanics.html'">⚙ Mechanics</button>
 <button onclick="location.href='enchantments.html'">✨ Enchantments</button>
+<button onclick="location.href='bosses.html'">👑 Bosses</button>
 </nav>
 
 <div class="container">
 <h2 class="section-header">Armor</h2>
 
-
 <!-- Champion Armor -->
-<div class="card">
+<div class="card" id="champion-armor">
 <h3>Champion Armor</h3>
 <img src="Invicon Champion Chestplate.png" alt="Champion Chestplate">
 <span class="tag">Damage Scaling</span>
 <span class="tag">Combat Build</span>
 <b>Obtaining:</b>
 <ul>
-<li>Altar of the Accursed</li>
-<li>4 Chorus Plating</li>
-<li>1 Enderite Smithing Template</li>
+<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
+<li><span class="mat"><a href="materials.html#chorus-plating">4 Chorus Plating</a></span></li>
+<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
 <li>Netherite armor piece</li>
 </ul>
 <b>Set Bonus:</b>
@@ -55,16 +68,16 @@
 </div>
 
 <!-- Hallowed Armor -->
-<div class="card">
+<div class="card" id="hallowed-armor">
 <h3>Hallowed Armor</h3>
 <img src="Invicon Hallowed Chestplate.png" alt="Hallowed Chestplate">
 <span class="tag">Mobility</span>
 <span class="tag">Survivability</span>
 <b>Obtaining:</b>
 <ul>
-<li>Altar of the Accursed</li>
-<li>4 Hallowed Ingots</li>
-<li>1 Enderite Smithing Template</li>
+<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
+<li><span class="mat"><a href="materials.html#hallowed-ingot">4 Hallowed Ingots</a></span></li>
+<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
 <li>Netherite armor piece</li>
 </ul>
 <b>Piece Bonuses:</b>
@@ -90,17 +103,17 @@
 </div>
 
 <!-- Shulker Armor -->
-<div class="card">
+<div class="card" id="shulker-armor">
 <h3>Shulker Armor</h3>
 <img src="Invicon Shulker Chestplate.png" alt="Shulker Chestplate">
 <span class="tag">Defense</span>
 <span class="tag">Summoner Style</span>
 <b>Obtaining:</b>
 <ul>
-<li>Altar of the Accursed</li>
-<li>4 Shulker Shells</li>
-<li>1 Enderite Smithing Template</li>
-<li>Netherite armor piece or defeat Shulking boss</li>
+<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
+<li><span class="mat"><a href="materials.html#shulker-shell">4 Shulker Shells</a></span></li>
+<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
+<li>Netherite armor piece or defeat <a href="bosses.html#shulking-boss">Shulking boss</a></li>
 </ul>
 <b>Set Bonus:</b>
 <ul>
@@ -117,16 +130,16 @@
 </div>
 
 <!-- Floral Armor -->
-<div class="card">
+<div class="card" id="floral-armor">
 <h3>Floral Armor</h3>
 <img src="Invicon Floral Chestplate.png" alt="Floral Chestplate">
 <span class="tag">Ranged Build</span>
 <span class="tag">Bow Focused</span>
 <b>Obtaining:</b>
 <ul>
-<li>Altar of the Accursed</li>
-<li>8 Cherry Leaves</li>
-<li>1 Enderite Smithing Template</li>
+<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
+<li><span class="mat"><a href="materials.html#cherry-leaf">8 Cherry Leaves</a></span></li>
+<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
 <li>Netherite armor piece</li>
 </ul>
 <b>Set Bonuses:</b>
@@ -145,12 +158,11 @@
 <li>Traditional arrows benefit most</li>
 </ul>
 </div>
-</div>
 
 </div>
 
-<footer style="text-align:center; padding:15px; background-color:#222; color:#fff; margin-top:30px;">
-    Stellarity Wiki - Devio
+<footer>
+Stellarity Wiki — Devio
 </footer>
 
 </body>
