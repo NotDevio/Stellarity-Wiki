@@ -206,27 +206,18 @@
 <span class="tag">Ranged</span>
 <b>Obtaining:</b>
 <ul>
-<li>Drop from Void Boss</li>
+  <li>Before v4.0.0: Crafted at <a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a> using any bow + 8 Dragon's Breath + 16 Enderite Shards + 1 Enderite Smithing Template</li>
+  <li>All Voided Skeletons spawn holding a Call of The Void (0.04% drop chance)</li>
+  <li>/loot give @s loot stellarity:item/weapon/call_of_the_void</li>
+  <li>/function stellarity:_cmd/give/weapons</li>
 </ul>
 <b>Usage:</b>
 <ul>
-<li>Summons void spikes</li>
-<li>AOE damage</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Spectral Fury</h3>
-<img src="images/weapons/spectral_fury.png" alt="Spectral Fury">
-<span class="tag">Ranged</span>
-<b>Obtaining:</b>
-<ul>
-<li>Drop from spectral mobs</li>
-</ul>
-<b>Usage:</b>
-<ul>
-<li>Ghostly projectiles</li>
-<li>Armor-piercing shots</li>
+  <li>Shoots Void Arrows, which travel 8% faster than normal arrows</li>
+  <li>Void Arrows shatter on impact with mobs or blocks, creating 9-11 shrapnel pieces</li>
+  <li>Each shrapnel deals 4HP damage and has a travel range of 3.6 blocks</li>
+  <li>Applies Voided I on direct hits</li>
+  <li>Can be enchanted with any Bow enchantment</li>
 </ul>
 </div>
 
@@ -236,12 +227,64 @@
 <span class="tag">Ranged</span>
 <b>Obtaining:</b>
 <ul>
-<li>Drop from Light Elementals</li>
+  <li>50% chance to drop from the Empress of Light in The End or during nighttime</li>
 </ul>
 <b>Usage:</b>
 <ul>
-<li>Rapid prism punches</li>
-<li>High scaling damage</li>
+  <li>Converts any loaded projectile into a Prismatic Blast</li>
+  <li>Blast velocity: 16 blocks/sec, accelerates by 4.8 blocks/sec², top speed 120 blocks/sec</li>
+  <li>Blasts unaffected by gravity, travel straight, explode on collision with mobs/blocks</li>
+  <li>Explosion base damage: 9HP, Multishot doubles size & increases damage/duration of Prismatic Inferno</li>
+  <li>Blasts can trigger multiple explosions at the same spot; Piercing allows multiple explosions to hit same target</li>
+  <li>Before 4.0.0: explosions deal slightly different damage and Inferno lasts 3–8 seconds depending on enchantments</li>
+</ul>
+<b>Tips:</b>
+<ul>
+  <li>Blasts are faster and more reliable than arrows for long distances</li>
+  <li>Area damage reduces need for perfect accuracy</li>
+  <li>Use regular arrows; ammo types are converted to blasts</li>
+  <li>Stay at safe distance to avoid blast damage</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Spectral Fury</h3>
+<img src="images/weapons/spectral_fury.png" alt="Spectral Fury">
+<span class="tag">Ranged</span>
+<b>Obtaining:</b>
+<ul>
+  <li>Spectral Fury can be obtained by combining a Sharanga, 3 Diamonds, 8 Phantom Membranes, and an Enderite Upgrade Smithing Template on the Altar of The Accursed</li>
+</ul>
+<b>Usage:</b>
+<ul>
+  <li>When using Spectral Arrows as ammunition, shots charged ≥1.5s will instead shoot a Wisp</li>
+  <li>Wisps last 7 seconds, slowly move forwards, and home in on mobs in a 16-block radius</li>
+  <li>Wisps can pierce 3 enemies; dissipate upon hitting the 4th</li>
+  <li>Wisps home in a "smart" way:
+    <ul>
+      <li>If 3 mobs near each other: hit all 3 one after another</li>
+      <li>If 2 mobs near each other: hit mob #1, then mob #2, then back to mob #1</li>
+      <li>If 1 mob and no other mobs nearby: hit same mob 3 times</li>
+    </ul>
+  </li>
+  <li>Wisps deal 5 + (1.5 × arrow base damage). After piercing, damage for next hit reduces by 30% (multiplicative)</li>
+  <li>Power Level Damage Table:
+    <ul>
+      <li>0 → 8HP / 5.6HP / 3.9HP / 2.7HP</li>
+      <li>1 → 9.5HP / 6.7HP / 4.7HP / 3.3HP</li>
+      <li>2 → 10.2HP / 7.1HP / 5HP / 3.5HP</li>
+      <li>3 → 11HP / 7.7HP / 5.4HP / 3.8HP</li>
+      <li>4 → 11.7HP / 8.2HP / 5.7HP / 4HP</li>
+      <li>5 → 12.5HP / 8.8HP / 6.1HP / 4.3HP</li>
+    </ul>
+  </li>
+</ul>
+<b>Tips:</b>
+<ul>
+  <li>Bolts disappear after hitting a block or 3 seconds, not by distance</li>
+  <li>Inherits Sharanga's arrow conservation chance; Infinity is superior to Mending</li>
+  <li>Mending is less useful due to increased durability</li>
+  <li>Skeletons in The End drop Spectral Arrows when Glowing, good for mob farms</li>
 </ul>
 </div>
 
@@ -249,68 +292,45 @@
 <div class="card">
 <h3>Stellar Striker</h3>
 <img src="images/weapons/stellar_striker.png" alt="Stellar Striker">
-<span class="tag">Mixed</span>
+<span class="tag">Melee</span>
 <b>Obtaining:</b>
 <ul>
-<li>Drop from Star Elementals</li>
+  <li>Master level trade from weaponsmiths in End Villages: 1 Gold Sword + 64 Enderite Shards</li>
 </ul>
 <b>Usage:</b>
 <ul>
-<li>Melee + ranged hybrid attacks</li>
+  <li>Progress bar fills 0.6% per second; hitting mobs adds 2%, killing instantly adds 3%</li>
+  <li>Stars are gained at 10%, 20%, 45%, 70%, 100% progress</li>
+  <li>Sneak to fire all reached stars with slight homing: 9HP damage per star, 6HP as splash, 50% Armor Penetration</li>
+  <li>After shooting stars, Stellar Striker cannot gain charge for 6 seconds</li>
+  <li>Max damage: 45HP × 22.5 total, with 22.5HP × 11.25 penetrating armor</li>
 </ul>
-</div>
-
-<div class="card">
-<h3>Fluffy Hammer of Justice</h3>
-<img src="images/weapons/fluffy_hammer_of_justice.png" alt="Fluffy Hammer of Justice">
-<span class="tag">Mixed</span>
-<b>Obtaining:</b>
+<b>Tips:</b>
 <ul>
-<li>Crafted from special events</li>
-</ul>
-<b>Usage:</b>
-<ul>
-<li>AOE hammer smash + stun</li>
+  <li>Stars travel long distance, move decently fast, slight homing</li>
+  <li>Effective against high-defense enemies due to armor penetration and high damage potential</li>
 </ul>
 </div>
 
 <!-- Other -->
 <div class="card">
 <h3>Shulker Tools</h3>
-<img src="images/weapons/shulker_pickaxe.png" alt="Shulker Pickaxe">
-<span class="tag">Other</span>
+<img src="images/weapons/shulker_tools.png" alt="Shulker Tools">
+<span class="tag">Tools / Melee</span>
 <b>Obtaining:</b>
 <ul>
-<li>Drop from Shulker mobs</li>
+  <li>Upgrade a Netherite Tool with 4 Shulker Shells + 1 Enderite Smithing Template at the Altar of The Accursed</li>
 </ul>
 <b>Usage:</b>
 <ul>
-<li>Mining + combat tool</li>
+  <li>Holding any of these items grants Haste I, allowing faster mining or 10% faster attacks</li>
+  <li>Useful for harvesting materials quickly or combat efficiency</li>
 </ul>
-</div>
-
-<div class="card">
-<h3>Sandstorm Trident</h3>
-<img src="images/weapons/sandstorm_trident.png" alt="Sandstorm Trident">
-
-<span class="tag">Ranged</span>
-<span class="tag">Mobility</span>
-
-<p><b>Obtaining:</b></p>
+<b>Tips:</b>
 <ul>
-  <li><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></li>
-  <li><a href="materials.html#sand-rune">Sand Rune</a></li>
-  <li><a href="materials.html#enderite-template">Enderite Smithing Template</a></li>
-  <li><a href="materials.html#trident">Trident</a></li>
-  <li><a href="materials.html#breeze-rod">2 Breeze Rods</a></li>
+  <li>Shulker Sword is a good general weapon, but Stellarity provides more unique options</li>
+  <li>Tools are significant upgrades with no alternatives besides Hematic Pickaxe [before 4.0.0]</li>
 </ul>
-
-<p><b>Usage:</b></p>
-<ul>
-  <li>Throw to create a wind tunnel</li>
-  <li>Wind tunnels can move entities</li>
-</ul>
-
 </div>
 
 </div> <!-- END MELEE -->
