@@ -2,21 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Stellarity Wiki — Armor</title>
+<title>Stellarity Wiki — Weapons</title>
 <link rel="stylesheet" href="style.css">
-<style>
-/* Material links inside armor cards */
-.mat a {
-    color: #e0e7ff; /* white text */
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.mat a:hover {
-    color: #22c55e;
-    text-decoration: underline;
-}
-</style>
 </head>
 <body>
 
@@ -27,7 +14,7 @@
 
 <nav>
 <button onclick="location.href='index.html'">🏠 Main</button>
-<button class="active">🛡 Armor</button>
+<button onclick="location.href='armor.html'">🛡 Armor</button>
 <button onclick="location.href='melee.html'">⚔ Weapons | Melee & Ranged</button>
 <button onclick="location.href='materials.html'">💎 Materials</button>
 <button onclick="location.href='trinkets.html'">🔮 Trinkets</button>
@@ -37,133 +24,342 @@
 </nav>
 
 <div class="container">
-<h2 class="section-header">Armor</h2>
+<div id="melee" class="tab-content">
+<h2 class="section-header">Weapons</h2>
 
-<!-- Champion Armor -->
-<div class="card" id="champion-armor">
-<h3>Champion Armor</h3>
-<img src="images/armor/champion-armor.png" alt="Champion Chestplate">
-<span class="tag">Damage Scaling</span>
-<span class="tag">Combat Build</span>
+<!-- Melee Weapons -->
+<div class="card">
+<h3>Tamaris</h3>
+<img src="images/weapons/tamaris.png" alt="Tamaris">
+<span class="tag">Support</span>
+<span class="tag">Execute</span>
 <b>Obtaining:</b>
+<p><b>Obtaining:</b></p>
 <ul>
-<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
-<li><span class="mat"><a href="materials.html#chorus-plating">4 Chorus Plating</a></span></li>
-<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
-<li>Netherite armor piece</li>
+  <li><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></li>
+  <li><a href="materials.html#enderite-shard">8 Enderite Shards</a></li>
+  <li><a href="materials.html#enderite-template">Enderite Smithing Template</a></li>
+  <li><a href="materials.html#netherite-sword">Netherite Sword</a></li>
+  <li><a href="materials.html#wither-skeleton-skull">Wither Skeleton Skull</a></li>
 </ul>
-<b>Set Bonus:</b>
+<p>Pre-v4.0.0: Dropped from <a href="bosses.html#ender-dragon">Ender Dragon</a></p>
+
+<b>Usage:</b>
 <ul>
-<li>Each hit increases next attack damage by <b>6%</b>, up to 5 stacks (~40%)</li>
-<li>Stacks last 3 seconds</li>
-<li>Hit sounds indicate stacks</li>
-<li>Purple sprint trail (cosmetic)</li>
+<li>Marks weak mobs (&lt;25% HP) with gray puff</li>
+<li>Sneak to warp to nearest weak mob and execute (range 10 blocks)</li>
+<li>Execute cooldown: 11s against Totem holders or Holy Protection buff</li>
 </ul>
+
 <b>Tips:</b>
 <ul>
-<li>Works with almost any weapon</li>
-<li>Best with fast attack builds</li>
-<li>Stacks with Duskberry bonuses</li>
+<li>Prioritizes nearest weak mob</li>
+<li>Great for chaining executions</li>
+<li>Use carefully in multiplayer to avoid accidental ally kills</li>
+<li>Execute cannot be dodged</li>
 </ul>
 </div>
 
-<!-- Hallowed Armor -->
-<div class="card" id="hallowed-armor">
-<h3>Hallowed Armor</h3>
-<img src="images/armor/hallowed-armor.png" alt="Hallowed Chestplate">
+<div class="card">
+<h3>Starless Scythe</h3>
+<img src="images/weapons/starless_scythe.png" alt="Starless Scythe">
+<span class="tag">Sweeping</span>
+<span class="tag">Healing</span>
+<p><b>Obtaining:</b></p>
+<ul>
+<li>End City Ominous Vaults</li>
+</ul>
+<p><b>Obtaining:</b></p>
+<ul>
+<li>Sweeping attack deals 60% base damage</li>
+<li>Heals player for 5% damage dealt</li>
+<li>Efficiency: cripples enemies</li>
+<li>Fortune: increases healing 2% per level</li>
+<li>Silk Touch: regenerates 3s on kill, extended if active</li>
+</ul>
+<b>Tips:</b>
+<ul>
+<li>Support weapon; use with health-draining builds</li>
+<li>Fortune for instant healing; Silk Touch for sustained regen</li>
+<li>Great against bosses with heavy damage</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>The Beginning & The End</h3>
+<img src="images/weapons/thebeginning.png" alt="The Beginning">
+<img src="images/weapons/theend.png" alt="The End">
+<span class="tag">Teleport</span>
+<span class="tag">Spirit</span>
+<p><b>Obtaining:</b></p>
+<ul>
+<li>End City Ominous Vaults & End Dungeon Chests</li>
+<li>Void fishing through Ender Crate</li>
+</ul>
+<b>Usage:</b>
+<ul>
+<li>50% chance to summon Spirit on damage</li>
+<li>Look at Spirit to teleport (0.5s)</li>
+<li>AOE slash around Spirit: 5HP damage + 100% armor penetration</li>
+<li>Grants 4HP Absorption, 3HP damage, +35% speed for 4s</li>
+<li>Stack with Strength & Swiftness potions</li>
+</ul>
+<b>Tips:</b>
+<ul>
+<li>Pair with Sharanga for long-range Spirit attacks</li>
+<li>Only one Spirit in 4-block radius</li>
+<li>Teleport distance limit: 70 blocks</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Harvester</h3>
+<img src="images/weapons/harvester_t0.png" alt="Harvester">
+<img src="images/weapons/harvester_t4.png" alt="Harvester T4">
+<span class="tag">Scaling Damage</span>
+<span class="tag">Tiered</span>
+<p><b>Obtaining:</b></p>
+<ul>
+<li>Strays in End Ice biomes (1% drop)</li>
+<li>Frozen Crates during Void Fishing (10% chance)</li>
+</ul>
+<b>Usage:</b>
+<ul>
+<li>Kills increase Harvester damage</li>
+<li>4 Tiers: T0-T4, attack speed decreases, movement penalty increases</li>
+<li>Tier 4: Unbreakable, max damage, 20% speed penalty</li>
+</ul>
+<b>Tips:</b>
+<ul>
+<li>Grind mobs to reach max damage quickly</li>
+<li>Use Swiftness to counter movement penalty</li>
+<li>Anima Conduit strongest survivability option</li>
+<li>Not compatible with Sharpness; Smite or Critical Strike recommended</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Prismember</h3>
+<img src="images/weapons/prismember.gif" alt="Prismember">
+<span class="tag">Spin Attack</span>
+<span class="tag">Armor Penetration</span>
+<p><b>Obtaining:</b></p>
+<ul>
+<li>25% drop from Empress of Light</li>
+</ul>
+<b>Usage:</b>
+<ul>
+<li>Crouch 0.4s → fiery spin: 8HP damage + 30% armor penetration</li>
+<li>Applies Prismatic Inferno for 3s (+1s per Fire Aspect level)</li>
+<li>Cooldown: 1 second</li>
+</ul>
+<b>Tips:</b>
+<ul>
+<li>Hit & run weapon</li>
+<li>Effective against armored enemies</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Kaleidoscope</h3>
+<img src="images/weapons/kaleidoscope.png" alt="Kaleidoscope">
+<span class="tag">Charge</span>
+<span class="tag">Explosion</span>
+<p><b>Obtaining:</b></p>
+<ul>
+<li>Drop from Empress of Light (Overworld day)</li>
+</ul>
+<b>Usage:</b>
+<ul>
+<li>Charges over 7.5s; being hurt reduces 50%</li>
+<li>Discharge ≥33 charge: heavy splash damage + fire</li>
+<li>Splash: 70% near, 30% far; Fire duration scales</li>
+<li>Unbreakable; immune to fire/lava/explosions</li>
+</ul>
+<b>Tips:</b>
+<ul>
+<li>Discharges inherit 50% melee damage bonuses</li>
+<li>Blast Protection reduces damage, armor piercing ignores it</li>
+<li>3rd level discharges are extremely deadly</li>
+</ul>
+</div>
+
+<!-- Ranged Weapons -->
+<div class="card">
+<h3>Sharanga</h3>
+<img src="images/weapons/sharanga.png" alt="Sharanga">
+<span class="tag">Ranged</span>
+<p><b>Obtaining:</b></p>
+<ul>
+<li>Crafted with Hallowed Ingots</li>
+</ul>
+<b>Usage:</b>
+<ul>
+<li>Long-range bow</li>
+<li>High projectile velocity</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Call of The Void</h3>
+<img src="images/weapons/call_of_the_void.png" alt="Call of The Void">
+<span class="tag">Ranged</span>
+<p><b>Obtaining:</b></p>
+<ul>
+  <li>Before v4.0.0: Crafted at <a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a> using any bow + 8 Dragon's Breath + 16 Enderite Shards + 1 Enderite Smithing Template</li>
+  <li>All Voided Skeletons spawn holding a Call of The Void (0.04% drop chance)</li>
+  <li>/loot give @s loot stellarity:item/weapon/call_of_the_void</li>
+  <li>/function stellarity:_cmd/give/weapons</li>
+</ul>
+<b>Usage:</b>
+<ul>
+  <li>Shoots Void Arrows, which travel 8% faster than normal arrows</li>
+  <li>Void Arrows shatter on impact with mobs or blocks, creating 9-11 shrapnel pieces</li>
+  <li>Each shrapnel deals 4HP damage and has a travel range of 3.6 blocks</li>
+  <li>Applies Voided I on direct hits</li>
+  <li>Can be enchanted with any Bow enchantment</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Prismatic Punch</h3>
+<img src="images/weapons/prismatic_punch.png" alt="Prismatic Punch">
+<span class="tag">Ranged</span>
+<p><b>Obtaining:</b></p>
+<ul>
+  <li>50% chance to drop from the Empress of Light in The End or during nighttime</li>
+</ul>
+<b>Usage:</b>
+<ul>
+  <li>Converts any loaded projectile into a Prismatic Blast</li>
+  <li>Blast velocity: 16 blocks/sec, accelerates by 4.8 blocks/sec², top speed 120 blocks/sec</li>
+  <li>Blasts unaffected by gravity, travel straight, explode on collision with mobs/blocks</li>
+  <li>Explosion base damage: 9HP, Multishot doubles size & increases damage/duration of Prismatic Inferno</li>
+  <li>Blasts can trigger multiple explosions at the same spot; Piercing allows multiple explosions to hit same target</li>
+  <li>Before 4.0.0: explosions deal slightly different damage and Inferno lasts 3–8 seconds depending on enchantments</li>
+</ul>
+<b>Tips:</b>
+<ul>
+  <li>Blasts are faster and more reliable than arrows for long distances</li>
+  <li>Area damage reduces need for perfect accuracy</li>
+  <li>Use regular arrows; ammo types are converted to blasts</li>
+  <li>Stay at safe distance to avoid blast damage</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Spectral Fury</h3>
+<img src="images/weapons/spectral_fury.png" alt="Spectral Fury">
+<span class="tag">Ranged</span>
+<p><b>Obtaining:</b></p>
+<ul>
+  <li>Spectral Fury can be obtained by combining a Sharanga, 3 Diamonds, 8 Phantom Membranes, and an Enderite Upgrade Smithing Template on the Altar of The Accursed</li>
+</ul>
+<b>Usage:</b>
+<ul>
+  <li>When using Spectral Arrows as ammunition, shots charged ≥1.5s will instead shoot a Wisp</li>
+  <li>Wisps last 7 seconds, slowly move forwards, and home in on mobs in a 16-block radius</li>
+  <li>Wisps can pierce 3 enemies; dissipate upon hitting the 4th</li>
+  <li>Wisps home in a "smart" way:
+    <ul>
+      <li>If 3 mobs near each other: hit all 3 one after another</li>
+      <li>If 2 mobs near each other: hit mob #1, then mob #2, then back to mob #1</li>
+      <li>If 1 mob and no other mobs nearby: hit same mob 3 times</li>
+    </ul>
+  </li>
+  <li>Wisps deal 5 + (1.5 × arrow base damage). After piercing, damage for next hit reduces by 30% (multiplicative)</li>
+  <li>Power Level Damage Table:
+    <ul>
+      <li>0 → 8HP / 5.6HP / 3.9HP / 2.7HP</li>
+      <li>1 → 9.5HP / 6.7HP / 4.7HP / 3.3HP</li>
+      <li>2 → 10.2HP / 7.1HP / 5HP / 3.5HP</li>
+      <li>3 → 11HP / 7.7HP / 5.4HP / 3.8HP</li>
+      <li>4 → 11.7HP / 8.2HP / 5.7HP / 4HP</li>
+      <li>5 → 12.5HP / 8.8HP / 6.1HP / 4.3HP</li>
+    </ul>
+  </li>
+</ul>
+<b>Tips:</b>
+<ul>
+  <li>Bolts disappear after hitting a block or 3 seconds, not by distance</li>
+  <li>Inherits Sharanga's arrow conservation chance; Infinity is superior to Mending</li>
+  <li>Mending is less useful due to increased durability</li>
+  <li>Skeletons in The End drop Spectral Arrows when Glowing, good for mob farms</li>
+</ul>
+</div>
+
+<!-- Mixed Weapons -->
+<div class="card">
+<h3>Stellar Striker</h3>
+<img src="images/weapons/stellar_striker.png" alt="Stellar Striker">
+<span class="tag">Melee</span>
+<p><b>Obtaining:</b></p>
+<ul>
+  <li>Master level trade from weaponsmiths in End Villages: 1 Gold Sword + 64 Enderite Shards</li>
+</ul>
+<b>Usage:</b>
+<ul>
+  <li>Progress bar fills 0.6% per second; hitting mobs adds 2%, killing instantly adds 3%</li>
+  <li>Stars are gained at 10%, 20%, 45%, 70%, 100% progress</li>
+  <li>Sneak to fire all reached stars with slight homing: 9HP damage per star, 6HP as splash, 50% Armor Penetration</li>
+  <li>After shooting stars, Stellar Striker cannot gain charge for 6 seconds</li>
+  <li>Max damage: 45HP × 22.5 total, with 22.5HP × 11.25 penetrating armor</li>
+</ul>
+<b>Tips:</b>
+<ul>
+  <li>Stars travel long distance, move decently fast, slight homing</li>
+  <li>Effective against high-defense enemies due to armor penetration and high damage potential</li>
+</ul>
+</div>
+
+<!-- Other -->
+<div class="card">
+<h3>Shulker Tools</h3>
+<img src="images/weapons/shulker_tools.png" alt="Shulker Tools">
+<span class="tag">Tools / Melee</span>
+<p><b>Obtaining:</b></p>
+<ul>
+  <li>Upgrade a Netherite Tool with 4 Shulker Shells + 1 Enderite Smithing Template at the Altar of The Accursed</li>
+</ul>
+<b>Usage:</b>
+<ul>
+  <li>Holding any of these items grants Haste I, allowing faster mining or 10% faster attacks</li>
+  <li>Useful for harvesting materials quickly or combat efficiency</li>
+</ul>
+<b>Tips:</b>
+<ul>
+  <li>Shulker Sword is a good general weapon, but Stellarity provides more unique options</li>
+  <li>Tools are significant upgrades with no alternatives besides Hematic Pickaxe [before 4.0.0]</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Sandstorm Trident</h3>
+<img src="images/weapons/sandstorm_trident.png" alt="Sandstorm Trident">
+<span class="tag">Ranged</span>
 <span class="tag">Mobility</span>
-<span class="tag">Survivability</span>
-<b>Obtaining:</b>
+
+
+<p><b>Obtaining:</b></p>
 <ul>
-<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
-<li><span class="mat"><a href="materials.html#hallowed-ingot">4 Hallowed Ingots</a></span></li>
-<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
-<li>Netherite armor piece</li>
+  <li><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></li>
+  <li><a href="materials.html#sand-rune">1 Sand Rune</a></li>
+  <li><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></li>
+  <li><a href="weapons.html#trident">1 Trident</a></li>
+  <li><a href="materials.html#breeze-rod">2 Breeze Rods</a></li>
 </ul>
-<b>Piece Bonuses:</b>
+
+<b>Usage:</b>
 <ul>
-<li>Helmet & Chestplate: +1 safe fall distance</li>
-<li>Leggings: +15% jump, +25% sneak speed</li>
-<li>Boots: +10% movement speed, +0.5 step height</li>
-</ul>
-<b>Full Set — Holy Protection:</b>
-<ul>
-<li>Immune to damage for 5s after taking any damage</li>
-<li>No knockback</li>
-<li>Fire Protection + Water Breathing (8s)</li>
-<li>Temporary speed boost</li>
-<li>Cooldown: 25s</li>
-</ul>
-<b>Tips:</b>
-<ul>
-<li>Very versatile</li>
-<li>Great for boss fights</li>
-<li>Strong with mobility builds</li>
+<li>Throwing the Sandstorm Trident summons a wind tunnel</li>
+<li>The wind tunnel can be used to move entities</li>
 </ul>
 </div>
 
-<!-- Shulker Armor -->
-<div class="card" id="shulker-armor">
-<h3>Shulker Armor</h3>
-<img src="images/armor/shulker-armor.png" alt="Shulker Chestplate">
-<span class="tag">Defense</span>
-<span class="tag">Summoner Style</span>
-<b>Obtaining:</b>
-<ul>
-<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
-<li><span class="mat"><a href="materials.html#shulker-shell">4 Shulker Shells</a></span></li>
-<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
-<li>Netherite armor piece or defeat <a href="bosses.html#shulking-boss">Shulking boss</a></li>
-</ul>
-<b>Set Bonus:</b>
-<ul>
-<li>50% chance on damage to spawn friendly Shulker Bullets</li>
-<li>Immune to Levitation & Wither</li>
-<li>Resistance I when surrounded by 4+ mobs</li>
-</ul>
-<b>Tips:</b>
-<ul>
-<li>Great for crowd control</li>
-<li>Use speed boosts to counter slow movement</li>
-<li>Resistance replaces need for Endurance potions</li>
-</ul>
-</div>
 
-<!-- Floral Armor -->
-<div class="card" id="floral-armor">
-<h3>Floral Armor</h3>
-<img src="images/armor/floral-armor.png" alt="Floral Chestplate">
-<span class="tag">Ranged Build</span>
-<span class="tag">Bow Focused</span>
-<b>Obtaining:</b>
-<ul>
-<li><span class="mat"><a href="mechanics.html#altar-of-the-accursed">Altar of the Accursed</a></span></li>
-<li><span class="mat"><a href="materials.html#cherry-leaf">8 Cherry Leaves</a></span></li>
-<li><span class="mat"><a href="materials.html#enderite-template">1 Enderite Smithing Template</a></span></li>
-<li>Netherite armor piece</li>
-</ul>
-<b>Set Bonuses:</b>
-<ul>
-<li>+25% arrow velocity (Chestplate)</li>
-<li>+10% arrow damage (Leggings)</li>
-<li>-5% melee damage per piece (max -20%)</li>
-<li>Arrows create explosive flowers</li>
-<li>Consecutive hits increase explosion damage</li>
-<li>Sneaking in tall plants grants invisibility (cosmetic)</li>
-</ul>
-<b>Tips:</b>
-<ul>
-<li>Best used with bows/crossbows</li>
-<li>Not ideal for melee combat</li>
-<li>Traditional arrows benefit most</li>
-</ul>
-</div>
-
-</div>
+</div> <!-- END MELEE -->
 
 <footer>
-Stellarity Wiki — Devio
+Stellarity Wiki — Weapons
 </footer>
 
-</body>
-</html>
